@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterfly challenge</title>
+
+    <!-- Styles -->
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link rel="preload" href="/public/PPNeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="/public/RomieLigatures-Regular.otf" as="font" type="font/otf" crossorigin="anonymous">
+
+    <!-- JS Modules -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@latest/examples/jsm/",
+            "gsap": "https://cdn.skypack.dev/gsap",
+            "gsap/ScrollTrigger": "https://cdn.skypack.dev/gsap/ScrollTrigger"
+          }
+        }
+      </script>
+</head>
+
+<body>
+    <!-- Component: Background -->
+    <div class="background" data-component="background">
+        <canvas class="background__canvas" data-select="canvas"></canvas>
+    </div>
+    <main>
+        <!-- Section: Hero -->
+        <section class="hero" data-section="hero">
+            <h1 class="hero__heading heading">
+                <span class="heading__line" data-select="line">Just when</span>
+                <span class="heading__line" data-select="line">the caterpillar</span>
+                <span class="heading__line" data-select="line">thought</span>
+                <span class="heading__line" data-select="line">the world was over,</span>
+                <span class="heading__line" data-select="line">it became</span>
+                <span class="heading__line" data-select="line">a butterfly.</span>
+            </h1>
+        </section>
+        <!--  Section: About -->
+        <section class="about" data-section="about">
+            <p class="about__paragraph paragraph" data-select="paragraph" id="main">
+                Butterflies are among the most enchanting creatures in the natural world, celebrated for their vibrant
+                colors, delicate wings, and graceful flight. Belonging to the order Lepidoptera, they undergo a
+                remarkable life cycle that embodies transformation and renewal. Beginning life as an egg, they hatch
+                into caterpillars, which voraciously consume leaves to fuel their growth. Eventually, they form a
+                chrysalis or cocoon, where they undergo a miraculous metamorphosis, emerging as fully-formed
+                butterflies. This process, often seen as a symbol of change and hope, inspires countless artists, poets,
+                and dreamers. Beyond their symbolic allure, butterflies play vital roles in ecosystems as pollinators
+                and as a food source for other species.
+            </p>
+            <p class="about__paragraph paragraph" data-select="paragraph">
+                Butterflies are not only beautiful but also incredibly diverse, with over 17,000 species found across
+                the globe. They inhabit a wide range of environments, from tropical rainforests to grasslands and even
+                urban areas. Despite their delicate appearance, butterflies are surprisingly resilient, with some
+                species capable of undertaking impressive migrations. For example, the monarch butterfly travels
+                thousands of kilometers between Canada and Mexico each year. However, these winged wonders face threats
+                from habitat loss, climate change, and pesticide use, making conservation efforts essential. Protecting
+                butterflies means preserving not only their beauty but also the ecological balance they help maintain.
+            </p>
+        </section>
+        <!--  Section: Contact -->
+        <section class="contact" data-section="contact">
+            <h2 class="contact__heading heading">Contact</h2>
+            <p class="contact__paragraph paragraph" data-select="paragraph">
+                Symbolizing transformation and <br /> the beauty of the unknown.
+            </p>
+        </section>
+    </main>
+    <script type="module" src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+/**
+* Fonts
+*/
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/public/PPNeueMontreal-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RomieLigatures";
+  src: url("/public/RomieLigatures-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/**
+* Variables
+*/
+:root {
+  --scale: 100vw / 1920;
+  --color-light: #ffffff;
+  --color-dark: #252525;
+  --grid-columns: 18;
+  --grid-gutter: 20;
+  --grid-margin: 20;
+  --spacing: 250;
+}
+
+/**
+* Common
+*/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PPNeueMontreal", sans-serif;
+  color: var(--color-dark);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+* Common
+*/
+.heading {
+  font-family: "RomieLigatures", serif;
+  font-size: calc(172 * var(--scale));
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.heading__line {
+  display: block;
+}
+
+.paragraph {
+  font-size: calc(16 * var(--scale));
+  line-height: 1.6;
+}
+
+/**
+* Component: Background
+*/
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/**
+* Section: Hero
+*/
+.hero {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: calc(var(--grid-gutter) * var(--scale));
+  margin: 0 calc(var(--grid-margin) * var(--scale));
+  padding: 50vh 0 0;
+}
+
+.hero__heading {
+  grid-column: 2 / span 16;
+  text-align: center;
+}
+
+/**
+* Section: about
+*/
+.about {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: calc(var(--grid-gutter) * var(--scale));
+  margin: calc(var(--spacing) * var(--scale)) calc(var(--grid-margin) * var(--scale)) 0;
+}
+
+.about__paragraph:nth-child(1) {
+  grid-column: 3 / span 5;
+}
+
+.about__paragraph:nth-child(2) {
+  grid-column: 9 / span 5;
+  padding: calc(var(--spacing) * var(--scale)) 0 0;
+}
+
+/**
+* Section: Contact
+*/
+.contact {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: calc(var(--grid-gutter) * var(--scale));
+  margin: 0 calc(var(--grid-margin) * var(--scale)) 0;
+  padding: calc(var(--spacing) * var(--scale)) 0;
+}
+
+.contact__heading {
+  grid-column: 2 / span 16;
+  text-align: center;
+}
+
+.contact__paragraph {
+  grid-column: 9 / span 5;
+  padding: calc(20 * var(--scale)) 0 0;
+}
